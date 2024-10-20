@@ -9,7 +9,6 @@ import (
 
 var option int8
 
-
 func msg(text string) {
 	fmt.Println("######################")
 	fmt.Println(text)
@@ -26,22 +25,22 @@ func ScreenClear(period int) {
 func menu() {
 	for {
 		ScreenClear(0)
-		fmt.Println("######TODO APP########\n")
+		fmt.Println("######TODO APP########")
 		fmt.Println("########IN GO#########\n")
-		fmt.Println("Select option: \n")
+		fmt.Println("Select option:")
 		fmt.Println("1) Continue\n2) Leave\n------")
 		fmt.Scan(&option)
 		if option == 1 {
 			app()
 		} else if option == 2 {
 			ScreenClear(0)
-			msg("You excited out of the program")
-			ScreenClear(3)
+			msg("You exited the program")
+			ScreenClear(1)
 			os.Exit(3)
 		} else {
 			ScreenClear(0)
-			msg("Error Try again...\n\n")
-			ScreenClear(3)
+			msg("Error! Try again...")
+			ScreenClear(1)
 		}
 	}
 }
