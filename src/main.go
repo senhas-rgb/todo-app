@@ -12,7 +12,7 @@ var option int8
 func msg(text string) {
 	fmt.Println("######################")
 	fmt.Println(text)
-	fmt.Println("######################\n")
+	fmt.Println("######################")
 }
 
 func ScreenClear(period int) {
@@ -26,7 +26,7 @@ func menu() {
 	for {
 		ScreenClear(0)
 		fmt.Println("######TODO APP########")
-		fmt.Println("########IN GO#########\n")
+		fmt.Println("########IN GO#########")
 		fmt.Println("Select option:")
 		fmt.Println("1) Continue\n2) Leave\n------")
 		fmt.Scan(&option)
