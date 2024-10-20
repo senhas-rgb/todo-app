@@ -23,13 +23,6 @@ func ScreenClear(period int) {
 	cmd.Run()
 }
 
-func app() {
-	ScreenClear(0)
-	fmt.Println("Under development")
-	ScreenClear(3)
-	menu()
-}
-
 func menu() {
 	for {
 		ScreenClear(0)
