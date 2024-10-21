@@ -13,10 +13,10 @@ func check(e error) { // helper to streamline error checks below (even I dont kn
 	}
 }
 
-func parse() {
-	filelocation := "storage.txt"
+func parse(fileLoc string) [][]string {
+	//filelocation := "storage.txt"
 
-	file, err := os.Open(filelocation)
+	file, err := os.Open(fileLoc)
 	check(err)
 	defer file.Close()
 	scanner := bufio.NewScanner(file) // new scanner to get each line of file
@@ -30,12 +30,12 @@ func parse() {
 
 	if err := scanner.Err(); err != nil {
 		fmt.Println("Error reading the file. Scanner error. : ", err)
-		return
+		return nil
 	}
 
 	for i, words := range lines {
 		fmt.Printf("Line %d: %v\n", i+1, words)
 		msg(lines[0][0])
 	}
-
+	return lines
 }
