@@ -13,17 +13,21 @@ func Interface() {
 		if option == 1 {
 			status_check()
 			msg("Under construction")
-			ScreenClear(3)
+			ScreenClear(1)
 			break
 		} else if option == 2 {
 			ScreenClear(0)
 			msg("Under construction")
-			ScreenClear(3)
+			ScreenClear(1)
 			break
+		} else if option == 3 {
+			ScreenClear(0)
+			msg("Under construction")
+			ScreenClear(1)
 		} else {
 			ScreenClear(0)
 			msg("Error try again...")
-			ScreenClear(3)
+			ScreenClear(1)
 		}
 	}
 }
