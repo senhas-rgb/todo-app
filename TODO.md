@@ -1,6 +1,6 @@
 ## Some tasks due
 
-- [ ] Create files/folders
+- [x] Create files/folders
 - [x] Make the barebones structure
 - [x] Implement logic for the app() func
 - [ ] Minor bug fixes
