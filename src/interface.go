@@ -12,6 +12,8 @@ func Interface() {
 		case 1:
 			ScreenClear(0)
 			status_check()
+			text := parse("upcoming.txt")
+			fmt.Println(text)
 			break
 		case 2:
 			ScreenClear(0)
@@ -20,7 +22,7 @@ func Interface() {
 			break
 		case 3:
 			ScreenClear(0)
-			msg("Under construction")
+			msg("Still working on it")
 			ScreenClear(1)
 			break
 		default:
