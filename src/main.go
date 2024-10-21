@@ -31,7 +31,9 @@ func menu() {
 		fmt.Println("1) Continue\n2) Leave\n------")
 		fmt.Scan(&option)
 		if option == 1 {
-			app()
+			ScreenClear(0)
+			Interface()
+			ScreenClear(1)
 		} else if option == 2 {
 			ScreenClear(0)
 			msg("You exited the program")

@@ -25,7 +25,7 @@ func status_check() {
 	if fileInfo.Size() == 0 {
 		ScreenClear(0)
 		msg("No tasks found.")
-		ScreenClear(1)
+		ScreenClear(0)
 	} else {
 		ScreenClear(0)
 		msg("Some tasks are present.")
