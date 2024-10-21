@@ -10,29 +10,29 @@ func Interface() {
 		msg("1) Add task\n2) View due tasks\n3) Archived tasks")
 		fmt.Scan(&NewOption)
 		switch NewOption {
-		case 1:
-			status_check()
-			ScreenClear(0)
-			msg("Under construction")
-			ScreenClear(1)
-			break
-		case 2:
-			ScreenClear(0)
-			fmt.Println("Working")
-			msg("Under construction")
-			ScreenClear(1)
-			break
-		case 3:
+			case 1:
+			 status_check()
+			 ScreenClear(0)
+			 msg("Under construction")
+			 ScreenClear(3)
+			 break
+			case 2:
 			ScreenClear(0)
 			fmt.Println("Working")
 			msg("Under construction")
-			ScreenClear(1)
+			ScreenClear(3)
 			break
-		default:
+			case 3:
+			ScreenClear(0)
+			fmt.Println("Working")
+			msg("Under construction")
+			ScreenClear(3)
+			break
+			default:
 			ScreenClear(0)
 			fmt.Println("Working")
 			msg("Error try again...")
-			ScreenClear(1)
+			ScreenClear(3)
 		}
 	}
 }
