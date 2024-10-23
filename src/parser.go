@@ -33,9 +33,10 @@ func parse(fileLoc string) [][]string {
 		return nil
 	}
 
-	for i, words := range lines {
-		fmt.Printf("Line %d: %v\n", i+1, words)
-		msg(lines[0][0])
-	}
+	//	for i, words := range lines {
+	//		fmt.Printf("Line %d: %v\n", i+1, words)
+	//		msg(lines[0][0])
+	//	}
+	//println(lines)
 	return lines
 }
