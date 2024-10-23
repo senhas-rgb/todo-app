@@ -18,7 +18,7 @@ func msg(text string) {
 }
 
 func ScreenClear(period int) {
-	time.Sleep(time.Duration(period) * time.Second)
+	time.Sleep(time.Duration(period) * time.Millisecond)
 	cmd := exec.Command("clear")
 	cmd.Stdout = os.Stdout
 	cmd.Run()
@@ -38,7 +38,7 @@ func menu() {
 				if IsSetup == 0 {
 					ScreenClear(0)
 					msg("Please configure in the storage locations in settings first.")
-					ScreenClear(1)
+					ScreenClear(600)
 					break
 				} else if IsSetup == 1 {
 					ScreenClear(0)
@@ -47,14 +47,14 @@ func menu() {
 				} else {
 					ScreenClear(0)
 					msg("Error.??!!")
-					ScreenClear(1)
+					ScreenClear(600)
 					break
 				}
 			}
 		} else if option == 2 {
 			ScreenClear(0)
 			msg("You exited the program")
-			ScreenClear(1)
+			ScreenClear(600)
 			os.Exit(3)
 
 		} else if option == 3 {
@@ -68,19 +68,19 @@ func menu() {
 				outMsg := "\"" + Flock + "\"" + " saved as the default location for tasks."
 				msg(outMsg)
 				IsSetup = 1
-				ScreenClear(1)
+				ScreenClear(600)
 			} else {
 				ScreenClear(0)
 				msg("File format not supported.")
-				ScreenClear(1)
+				ScreenClear(600)
 			}
 		} else {
 			ScreenClear(0)
 			msg("Error! Try again...")
-			ScreenClear(1)
+			ScreenClear(600)
 			if IsSetup == 0 {
-				msg("Also please configure in the storage locations in settings first.")
-				ScreenClear(1)
+				msg("Please configure in the storage locations in settings first.")
+				ScreenClear(800)
 			}
 		}
 	}
