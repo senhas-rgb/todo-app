@@ -59,13 +59,13 @@ func menu() {
 
 		} else if option == 3 {
 			ScreenClear(0)
-			fmt.Println("Please enter the file name with the extension.\n")
+			fmt.Println("Please enter a file for saving tasks.\n")
 			msg("NOTE: The file should be a .txt file.")
 			fmt.Print(">>")
 			fmt.Scan(&Flock)
 			if Flock[len(Flock)-4:] == ".txt" && len(Flock) > 5 {
 				ScreenClear(0)
-				outMsg := "\"" + Flock + "\"" + " Saved as the default location for tasks."
+				outMsg := "\"" + Flock + "\"" + " saved as the default location for tasks."
 				msg(outMsg)
 				IsSetup = 1
 				ScreenClear(1)
