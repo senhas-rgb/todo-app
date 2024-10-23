@@ -9,8 +9,8 @@ func status_check() {
 	file, err := os.Open(FilePath)
 	if err != nil {
 		ScreenClear(0)
-		msg("Error opening the storage.txt. Maybe deleted???")
-		ScreenClear(1)
+		msg("Error opening storage.txt. Maybe the file was deleted?")
+		ScreenClear(600)
 		return
 	}
 	defer file.Close()
@@ -18,8 +18,8 @@ func status_check() {
 	fileInfo, err := file.Stat()
 	if err != nil {
 		ScreenClear(0)
-		msg("Error getting file info???")
-		ScreenClear(1)
+		msg("Error getting file info")
+		ScreenClear(600)
 		return
 	}
 	if fileInfo.Size() == 0 {
@@ -29,6 +29,6 @@ func status_check() {
 	} else {
 		ScreenClear(0)
 		msg("Some tasks are present.")
-		ScreenClear(1)
+		ScreenClear(600)
 	}
 }
