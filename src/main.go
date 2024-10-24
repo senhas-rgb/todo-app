@@ -9,7 +9,7 @@ import (
 
 var option int8
 var IsSetup int8 = 0 // false
-var Flock string
+var fileLoc string
 
 func msg(text string) {
 	fmt.Println("######################")
@@ -42,7 +42,7 @@ func menu() {
 					break
 				} else if IsSetup == 1 {
 					ScreenClear(0)
-					Interface()
+					Interface(fileLoc)
 					break
 				} else {
 					ScreenClear(0)
@@ -62,15 +62,15 @@ func menu() {
 			fmt.Printf("Please enter a file for saving tasks.\n\n")
 			msg("NOTE: The file should be a .txt file.")
 			fmt.Print(">>")
-			fmt.Scan(&Flock)
+			fmt.Scan(&fileLoc)
 
-			if len(Flock) < 4 {
+			if len(fileLoc) < 4 {
 				ScreenClear(0)
 				msg("File name too short")
 				ScreenClear(700)
-			} else if Flock[len(Flock)-4:] == ".txt" && len(Flock) > 5 {
+			} else if fileLoc[len(fileLoc)-4:] == ".txt" && len(fileLoc) > 5 {
 				ScreenClear(0)
-				outMsg := "\"" + Flock + "\"" + " saved as the default location for tasks."
+				outMsg := "\"" + fileLoc + "\"" + " saved as the default location for tasks."
 				msg(outMsg)
 				IsSetup = 1
 				ScreenClear(600)
