@@ -6,9 +6,9 @@
 - [x] Minor bug fixes
 - [x] Importing function
 - [x] Make the parser work
-- [ ] Save program configs locally
-- [ ] Gui to add/mark done/arhieve/delete and see tasks
-- [ ] Quote system when entering program
 - [x] Performance fixes
 - [x] Runtime checks
+- [ ] Save program configs locally
+- [ ] Gui to add/mark as done/archive/delete and see tasks
+- [ ] Quote system when entering program
 - [ ] First release
