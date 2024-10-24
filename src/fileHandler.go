@@ -40,3 +40,10 @@ func parse(fileLoc string) [][]string {
 	//println(lines)
 	return lines
 }
+
+func Fwrite(wString string, fileLoc string) {
+	file, err := os.OpenFile(fileLoc, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	defer file.Close()
+	_, err = file.WriteString(wString)
+	check(err)
+}
