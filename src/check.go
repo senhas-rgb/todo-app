@@ -4,12 +4,11 @@ import (
 	"os"
 )
 
-func status_check() {
-	FilePath := "storage.txt"
+func status_check(FilePath string) {
 	file, err := os.Open(FilePath)
 	if err != nil {
 		ScreenClear(0)
-		msg("Error opening storage.txt. Maybe the file was deleted?")
+		msg("Error opening \"" + FilePath + "\"" + ". Maybe the file was deleted?")
 		ScreenClear(600)
 		return
 	}
